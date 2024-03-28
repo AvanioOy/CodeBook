@@ -1,6 +1,6 @@
 # CodeBook
 
-Avanio Code Book
+Avanio CodeBook
 
 ## Languages
 
