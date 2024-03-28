@@ -32,7 +32,7 @@ const fileEnv = new FileConfigLoader({
   fileName: "./settings.json",
   type: "json",
 }).getLoader;
-// default loaders, can be defined also on per variable basis
+// default loaders and order, can be defined also on per variable basis
 const loaders = [env(), fileEnv(), dockerEnv()];
 
 type RootVariables = {
