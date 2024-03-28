@@ -43,7 +43,7 @@ type RootVariables = {
 
 export const rootConfig = new ConfigMap<RootVariables>({
   PORT: {loaders, parser: integerParser(), defaultValue: 6000, params: { showValue: true }},
-  MONGODB_URI: {loaders,parser: urlParse, defaultValue: new URL("mongodb://localhost/db"), params: { showValue: true }},
+  MONGODB_URI: {loaders, parser: urlParse, defaultValue: new URL("mongodb://localhost/db"), params: { showValue: true }},
   JWT_SECRET: {loaders, parser: stringParser(), undefinedThrowsError: true},
 });
 const port: number = await rootConfig.get("PORT");
