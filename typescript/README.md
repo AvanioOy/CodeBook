@@ -9,6 +9,7 @@
 - **LevelLogger** where you can setup base log level. (extendable class)
 
 ```typescript
+import {ILoggerLike} from '@avanio/logger-like';
 function doSomething(logger?: ILoggerLike) {
   logger?.info("doing something");
 }
