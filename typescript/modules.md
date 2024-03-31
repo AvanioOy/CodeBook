@@ -4,9 +4,9 @@
 
 
 
-### Logging: [@avanio/logger-like](https://www.npmjs.com/package/@avanio/logger-like) ![Typescript](https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF&style=flat-square)
+### Logging: [@avanio/logger-like](https://www.npmjs.com/package/@avanio/logger-like) 
 
-- **_important_** : **ILoggerLike** interface type which matches with console/log4js/winston
+- **_important_** : **ILoggerLike** interface type which matches with console/log4js/winston ![Typescript](https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF&style=flat-square)
 - **MapLogger** for complex setups, this extends normal logger with pre-defined keys and log levels for those. (extendable class)
 - **LevelLogger** where you can setup base log level. (extendable class)
 
