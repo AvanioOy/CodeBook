@@ -74,3 +74,11 @@ const cache = new ExpireCache<string>();
 cache.set('key','value', new Date(Date.now() + 1000)); // expires in 1 second
 const value = cache.get('key'); // returns 'value'
 ```
+
+### Sleep Promise [@avanio/sleep](https://www.npmjs.com/package/@avanio/sleep)
+```typescript
+await sleep(1000); // plain async sleep
+const controller = new AbortController();
+await sleep(1000, {signal: controller.signal}); // sleep with abort signal
+await sleep(1000, {signal: controller.signal, abortThrows: true}); // sleep with abort signal and throws SleepAbortError when aborted
+```
