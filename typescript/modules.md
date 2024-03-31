@@ -2,7 +2,9 @@
 
 ## Common basic blocks which can be used in Typescript and Javascript projects
 
-### Logging: [@avanio/logger-like](https://www.npmjs.com/package/@avanio/logger-like) (typescript)
+
+
+### Logging: [@avanio/logger-like](https://www.npmjs.com/package/@avanio/logger-like) ![Typescript](https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF&style=flat-square)
 
 - **_important_** : **ILoggerLike** interface type which matches with console/log4js/winston
 - **MapLogger** for complex setups, this extends normal logger with pre-defined keys and log levels for those. (extendable class)
