@@ -84,3 +84,35 @@ const controller = new AbortController();
 await sleep(1000, {signal: controller.signal}); // sleep with abort signal
 await sleep(1000, {signal: controller.signal, abortThrows: true}); // sleep with abort signal and throws SleepAbortError when aborted
 ```
+
+### XML parser [@avanio/xml-mapper](https://www.npmjs.com/package/@avanio/xml-mapper)
+- uses Mongoose like schema to parse XML to Object.
+```typescript
+type XmlData = {
+	root: {
+		string: string;
+		number: number;
+		date: Date;
+	};
+};
+
+const xml = `<root>
+    <string>string</string>
+    <number>123</number>
+    <date>2020-01-01T00:00:00.000Z</date>
+</root>`;
+
+const doc = new DOMParser().parseFromString(xml);
+
+const dataSchema: MappingSchema<XmlData['root']> = {
+	string: {mapper: stringValue, required: true},
+	number: {mapper: integerValue, required: true},
+	date: {mapper: dateValue, required: true},
+};
+
+const rootSchema: MappingSchema<XmlData> = {
+	root: {mapper: objectSchemaValue(dataSchema), required: true},
+};
+
+const data: XmlData = rootParser(doc.documentElement, rootSchema);
+```
